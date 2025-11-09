@@ -100,3 +100,53 @@ body{
   .grid{grid-template-columns:1fr}
   .topbar .nav{gap:10px}
 }
+/* ===== Topbar & Brand – stable layout ===== */
+.topbar{
+  position:sticky; top:0; z-index:1000;
+  backdrop-filter: blur(10px);
+  background: rgba(7,14,28,.55);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  padding-top: env(safe-area-inset-top); /* iOS notch */
+}
+.topbar .container{
+  height:64px; display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding-inline:20px;
+}
+
+.brand{ display:flex; align-items:center; gap:10px; min-width:0; }
+.brand-logo{
+  width:32px; height:32px; object-fit:contain; display:block;
+  border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,.25);
+}
+.brand-name{
+  font-weight:800; font-size:20px; letter-spacing:.2px; line-height:1;
+  white-space:nowrap;
+}
+
+/* Nav spacing */
+.nav{ display:flex; align-items:center; gap:14px; flex-wrap:nowrap; }
+.nav a{ white-space:nowrap; }
+
+/* Hero spacing so it won't collide with the bar */
+.hero{ padding-top:12px; }
+
+/* ===== Hover/Micro interactions (לא חובה, נראה טוב) ===== */
+.btn{ transition:transform .18s ease, box-shadow .18s ease }
+.card{ transition:transform .2s ease, box-shadow .2s ease }
+.card:hover{ transform:translateY(-3px); box-shadow:0 16px 40px rgba(0,0,0,.28) }
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 768px){
+  .topbar .container{ height:56px; padding-inline:14px; }
+  .brand-logo{ width:28px; height:28px; }
+  .brand-name{ font-size:18px; }
+  .nav{ gap:10px; }
+}
+
+@media (max-width: 480px){
+  .brand-logo{ width:24px; height:24px; }
+  .brand-name{ font-size:17px; }
+  .nav a{ font-size:14px; opacity:.92; }
+  /* אם עדיין צפוף: מסתירים כפתור אחד לבחירתך */
+  /* .nav a[href="#features"]{ display:none; } */
+}
