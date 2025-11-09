@@ -31,7 +31,7 @@
 ├── favicon.ico
 ├── Dockerfile
 └── .github/workflows/
-## 🚀 הפעלה מקומית
+* הפעלה מקומית
 ```bash
 # Docker אופציונלי
 docker build -t autoroy-devops-demo .
