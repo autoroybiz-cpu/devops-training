@@ -150,3 +150,11 @@ body{
   /* אם עדיין צפוף: מסתירים כפתור אחד לבחירתך */
   /* .nav a[href="#features"]{ display:none; } */
 }
+.hero .badge, .hero .hero-icon, .hero .logo-badge{
+  width:64px; height:64px; border-radius:16px;
+}
+@media (max-width: 480px){
+  .hero .badge, .hero .hero-icon, .hero .logo-badge{
+    width:44px; height:44px; border-radius:12px;
+  }
+}
