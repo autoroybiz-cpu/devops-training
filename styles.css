@@ -1,0 +1,10 @@
+:root{--bg:#0f1720;--card:#0b1220;--accent:#00d4ff;--muted:#94a3b8;color-scheme:dark}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Arial;background:linear-gradient(180deg,#071026, #0f1720);color:#e6eef6;margin:0;padding:40px}
+header{max-width:900px;margin:0 auto 24px}
+h1{margin:0;font-size:28px}
+.tag{color:var(--muted);margin-top:6px}
+main{max-width:900px;margin:0 auto;background:rgba(255,255,255,0.02);padding:24px;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+.hero h2{margin-top:0;color:var(--accent)}
+.commands pre{background:#031022;padding:12px;border-radius:6px;overflow:auto;color:#9ef}
+footer{max-width:900px;margin:20px auto;color:var(--muted);text-align:center}
