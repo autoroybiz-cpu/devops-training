@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AutoRoy logo">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39d5c5"/>
+      <stop offset="100%" stop-color="#7b55ff"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,.25)"/>
+    </filter>
+  </defs>
+
+  <!-- רקע עגול עם גרדיאנט -->
+  <circle cx="32" cy="32" r="28" fill="url(#grad)" filter="url(#softShadow)"/>
+
+  <!-- "A" -->
+  <path d="M22 44 L30.5 22 a2 2 0 0 1 3 0 L42 44 h-5.6 l-1.7-5h-8.5l-1.7 5H22z
+           M29.9 34h6.2l-3.1-9.2L29.9 34z"
+        fill="white" opacity="0.95"/>
+
+  <!-- רמז ל-"R" (רגל פנימית) -->
+  <path d="M36 34 q6 0 6 6 v4 h-4.6 v-3.2q0-3-3.7-3H32l1.2-3.8h2.8z"
+        fill="white" opacity="0.95"/>
+</svg>
