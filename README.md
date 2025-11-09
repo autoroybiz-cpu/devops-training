@@ -26,3 +26,14 @@
 ---
 
 * מבנה הפרויקט
+├── index.html
+├── styles.css
+├── favicon.ico
+├── Dockerfile
+└── .github/workflows/
+## 🚀 הפעלה מקומית
+```bash
+# Docker אופציונלי
+docker build -t autoroy-devops-demo .
+docker run -p 8080:80 autoroy-devops-demo
+# http://localhost:8080
