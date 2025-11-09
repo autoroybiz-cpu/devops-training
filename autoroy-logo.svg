@@ -1,34 +1,35 @@
 <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AutoRoy Logo">
   <defs>
-    <!-- גרדיינט זוהר -->
     <linearGradient id="gradAR" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#00E8D7"/>
       <stop offset="100%" stop-color="#8B5CF6"/>
     </linearGradient>
 
-    <!-- הצללה חכמה -->
     <filter id="glow">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feGaussianBlur stdDeviation="5" result="b"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
 
   <!-- רקע עגול -->
-  <circle cx="128" cy="128" r="112" fill="#050505" />
-
-  <!-- טבעת חיצונית -->
+  <circle cx="128" cy="128" r="112" fill="#050505"/>
   <circle cx="128" cy="128" r="112" fill="none" stroke="url(#gradAR)" stroke-width="3" opacity="0.6"/>
 
-  <!-- טקסט AR -->
-  <text x="128" y="160" text-anchor="middle"
-        font-family="Inter, system-ui, sans-serif"
-        font-weight="900"
-        font-size="120"
-        fill="url(#gradAR)"
-        filter="url(#glow)">
+  <!-- טקסט ממורכז אמיתי אופקית ואנכית -->
+  <text
+    x="128" y="128"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+    font-weight="900"
+    font-size="118"
+    fill="url(#gradAR)"
+    filter="url(#glow)"
+    letter-spacing="2"
+    style="paint-order: stroke fill; stroke:#000; stroke-width:0.6">
     AR
   </text>
 </svg>
