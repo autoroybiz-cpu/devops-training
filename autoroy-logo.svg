@@ -1,27 +1,34 @@
-<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AR logo">
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AutoRoy Logo">
   <defs>
-    <!-- גרדיינט צבעים טורקיז→סגול -->
+    <!-- גרדיינט זוהר -->
     <linearGradient id="gradAR" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#11D6CA"/>
-      <stop offset="100%" stop-color="#7A4CFF"/>
+      <stop offset="0%" stop-color="#00E8D7"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
     </linearGradient>
+
+    <!-- הצללה חכמה -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
-  <!-- רקע עגול שחור -->
-  <circle cx="128" cy="128" r="112" fill="#0A0A0A"/>
+  <!-- רקע עגול -->
+  <circle cx="128" cy="128" r="112" fill="#050505" />
 
-  <!-- טבעת חיצונית קטנה -->
-  <circle cx="128" cy="128" r="112" fill="none" stroke="url(#gradAR)" stroke-width="4" opacity="0.6"/>
+  <!-- טבעת חיצונית -->
+  <circle cx="128" cy="128" r="112" fill="none" stroke="url(#gradAR)" stroke-width="3" opacity="0.6"/>
 
-  <!-- אותיות AR במרכז -->
-  <text
-    x="128"
-    y="164"
-    text-anchor="middle"
-    font-size="120"
-    font-weight="800"
-    font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
-    fill="url(#gradAR)">
+  <!-- טקסט AR -->
+  <text x="128" y="160" text-anchor="middle"
+        font-family="Inter, system-ui, sans-serif"
+        font-weight="900"
+        font-size="120"
+        fill="url(#gradAR)"
+        filter="url(#glow)">
     AR
   </text>
 </svg>
