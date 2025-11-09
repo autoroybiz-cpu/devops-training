@@ -2,7 +2,7 @@
   <!-- רקע עגול כהה -->
   <circle cx="128" cy="128" r="112" fill="#0A0A0A"/>
   <!-- רגל שמאל של ה-A -->
-  <path d="M88 176 L128 88" stroke="#11D6CA" stroke-width="40" stroke-linecap="round" fill="none"/>
+  <path d="M88 176 L180 88" stroke="#11D6CA" stroke-width="40" stroke-linecap="round" fill="none"/>
   <!-- האלכסון שמחבר בין A ל-R -->
   <path d="M128 88 L168 176" stroke="#7A4CFF" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   <!-- הרגל של ה-R -->
