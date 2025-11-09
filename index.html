@@ -5,40 +5,112 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AutoRoy — DevOps Demo</title>
   <link rel="icon" href="/favicon.ico?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="AutoRoy — DevOps Demo">
+  <meta property="og:description" content="Static site on Render CDN, Dockerized with Nginx, auto-deploy from GitHub.">
+  <meta property="og:type" content="website">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>AutoRoy — DevOps Demo</h1>
-      <p class="tag">A small demo: Static site, Docker &amp; CI/CD</p>
-    </header>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">AR</div>
+        <span class="brand-name">AutoRoy</span>
+      </div>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#flow">How it works</a>
+        <a class="pill" target="_blank" rel="noopener" href="https://github.com/autoroybiz-cpu/devops-training">View source ↗</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <h2>Welcome to my DevOps showcase</h2>
-        <p>This demo shows how Git + Docker + GitHub Actions CI/CD deploy automatically to Render.</p>
-        <ul>
-          <li>Static site (HTML/CSS) on CDN</li>
-          <li>Dockerized with Nginx</li>
-          <li>Auto-deploy on commit to <code>main</code></li>
-        </ul>
-
-        <div class="code">
-<pre>git add .
-git commit -m "update site design"
-git push</pre>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <h1>DevOps Demo — fast, clean, automatic</h1>
+          <p class="subtitle">Static site on <b>Render CDN</b>, Dockerized with <b>Nginx</b>, auto-deploy from <b>GitHub</b>.</p>
+          <div class="cta">
+            <a class="btn primary" href="#features">Explore</a>
+            <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/autoroybiz-cpu/devops-training">GitHub repo</a>
+          </div>
+          <div class="stats">
+            <span>⚡ CDN • no wake-up</span>
+            <span>🐳 Docker ready</span>
+            <span>🔁 CI/CD on commit</span>
+          </div>
         </div>
+        <div class="hero-card">
+<pre><code>git add .
+git commit -m "feat: live demo"
+git push        # Render auto-deploys
+</code></pre>
+        </div>
+      </div>
+      <div class="glow"></div>
+    </section>
 
-        <p style="text-align:center;margin-top:16px">
-          <a href="https://github.com/autoroybiz-cpu/devops-training" target="_blank" rel="noopener">
-            View source on GitHub ↗
-          </a>
+    <section id="features" class="features">
+      <div class="container grid">
+        <article class="card">
+          <div class="ico">🚀</div>
+          <h3>Blazing fast</h3>
+          <p>Served from Render CDN with caching and HTTPS out of the box.</p>
+        </article>
+        <article class="card">
+          <div class="ico">🐳</div>
+          <h3>Dockerized</h3>
+          <p>Simple Nginx image for static or demo backends. Ready for Web Service.</p>
+        </article>
+        <article class="card">
+          <div class="ico">🔁</div>
+          <h3>CI/CD</h3>
+          <p>Every push to <code>main</code> triggers an automatic deploy.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="flow" class="flow">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><b>Edit</b> code on GitHub</li>
+          <li><b>Commit</b> to <code>main</code></li>
+          <li><b>Deploy</b> kicks in on Render (Static Site)</li>
+          <li><b>Live</b> site updates instantly</li>
+        </ol>
+
+<pre class="block"><code># Local run with Docker (optional)
+docker build -t autoroy-devops-demo .
+docker run -p 8080:80 autoroy-devops-demo
+# open http://localhost:8080
+</code></pre>
+
+        <p class="center">
+          <a class="btn primary" target="_blank" rel="noopener" href="https://devops-training-3g38.onrender.com">Open live demo ↗</a>
         </p>
-      </section>
+      </div>
+    </section>
 
-      <p class="footer">Built by AutoRoy · DevOps &amp; Automations</p>
-    </main>
-  </div>
+    <section class="tech">
+      <div class="container badges">
+        <span class="badge">HTML5</span><span class="badge">CSS3</span>
+        <span class="badge">Nginx</span><span class="badge">Docker</span>
+        <span class="badge">GitHub</span><span class="badge">Render</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by <b>AutoRoy</b> · DevOps &amp; Automations •
+        <a target="_blank" rel="noopener" href="https://github.com/autoroybiz-cpu/devops-training">source ↗</a></p>
+    </div>
+  </footer>
 </body>
 </html>
